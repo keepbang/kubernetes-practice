@@ -17,3 +17,4 @@
 -------------
 ### 참고 자료
   - [24단계 실습으로 정복하는 쿠버네티스](https://www.yes24.com/Product/Goods/115187666)
+  - [Kubernetes Documents](https://kubernetes.io/ko/docs)
