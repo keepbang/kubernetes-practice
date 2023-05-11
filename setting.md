@@ -7,9 +7,12 @@
 > VM : [UTM Virtual Machines](https://mac.getutm.app/)
 
 - m2 환경으로 VM이아닌 docker를 사용할려고 했으나 최대한 책의 실습환경과 유사한 환경으로 하는게 괜찮을거 같아서 UTM으로 실습 진행
-- 최소사양`(cpu : 2, memory : 4g, disk: 10GB)`으로 VM 생성
+- 최소사양`(cpu : 2, memory : 4g, disk: [100GB 1ae, 10GB 2ae])`으로 VM 3대 생성
 - 우분투 이미지는 `ARM`으로 다운로드 받아서 가상화모드로 설치
 - [Ubuntu for ARM | Download](https://ubuntu.com/download/server/arm)
+
+### 참고자료
+- [UTM 및 우분투 설치 링크](https://www.lainyzine.com/ko/article/how-to-use-virtual-machines-on-apple-silicon-mac/)
 
 <br/>
 
