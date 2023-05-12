@@ -10,6 +10,8 @@
 - 최소사양`(cpu : 2, memory : 4g, disk: [100GB 1ae, 10GB 2ae])`으로 VM 3대 생성
 - 우분투 이미지는 `ARM`으로 다운로드 받아서 가상화모드로 설치
 - [Ubuntu for ARM | Download](https://ubuntu.com/download/server/arm)
+![img.png](setting_image.png)
+
 
 ### 참고자료
 - [UTM 및 우분투 설치 링크](https://www.lainyzine.com/ko/article/how-to-use-virtual-machines-on-apple-silicon-mac/)
