@@ -39,6 +39,7 @@ rules:
 -----
 
 ### 3. 롤 바인딩 생성
+- `role`에 사용자를 묶어주는것
 - `RoleBinding` 파일 생성 후 `apply`를 통해 적용
 
 [service-reader-rolebinding.yml]
@@ -70,10 +71,63 @@ roleRef:  # 어떤 롤을
 # kubectl get services --as system:serviceaccount:default:keepbang
 ```
 
-![img.png](img.png)
+![img.png](../images/img.png)
 
 
 -----
 
 #### 과제
 - Cluster role 생성해보기
+
+
+### Cluster role?
+- `Role`이 지정된 네임스페이스에 권한을 정의하는 거라면 `Cluster Role`은 속해있지 않은 네임스페이스에서도 권한을 정의하는 것이다.
+
+### 1. 클러스터 롤 생성
+- `namespace` 전체에 적용되기 때문에 `namespace`속성이 없다
+
+[read-clusterrole.yml]
+```shell
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: read-clusterrole # read-clusterrole 이라는 이름으로 생성
+rules:
+- apiGroups: [""]
+  resources: ["pods"] # 전체 네임스페이스의 pod에 대한 get, list 권한 부여
+  verbs: ["get", "list"]
+```
+
+```
+# kubectl apply -f ./read-clusterrole.yml
+```
+
+![img_1.png](../images/img_1.png)
+
+-----
+
+### 2. 클러스터 롤 바인딩 생성
+- `role binding`과 마찬가지로 `cluster role`과 사용자를 묶어주는 것
+
+[read-clusterrolebinding.yml]
+```shell
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: read-clusterrolebinding
+subjects:
+- kind: ServiceAccount
+  name: keepbang
+  namespace: default # 서비스어카운트는 네임스페이스에 속해있기 때문에 어떤 네임스페이스에 속한 서비스어카운트인지 명시해야함.
+  apiGroup: ""
+roleRef:
+  kind: ClusterRole
+  name: read-clusterrole
+  apiGroup: rbac.authorization.k8s.io
+```
+
+```
+# kubectl apply -f ./read-clusterrolebinding.yml
+```
+
+![img_2.png](../images/img_2.png)
