@@ -15,7 +15,7 @@
 
 
 ## study
-- [Role 설정](/company/1_role_binding.md)
+- [Role 설정](/study/1_role_binding.md)
 
 -------------
 ### 참고 자료
