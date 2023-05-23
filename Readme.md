@@ -13,6 +13,10 @@
   - [1-1. 쿠버네티스 개요](chap1/chap1_1.md)
   - [1-2. 쿠버네티스 설치](chap1/chap1_2.md)
 
+
+## study
+- [Role 설정](/company/1_role_binding.md)
+
 -------------
 ### 참고 자료
   - [24단계 실습으로 정복하는 쿠버네티스](https://www.yes24.com/Product/Goods/115187666)
