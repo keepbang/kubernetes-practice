@@ -49,7 +49,7 @@ $ brew install kube-ps1
 
 - 네임스페이스, 디플로이먼트, 서비스, 인그레스 등 클러스터의 리소스 간의 계층 구조를 보여주는 데 사용
 
-[nginx-deployment.yaml]
+[[nginx-deployment.yaml](https://raw.githubusercontent.com/kubernetes/website/main/content/ko/examples/controllers/nginx-deployment.yaml)]
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -59,7 +59,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 2 # tells deployment to run 2 pods matching the template
+  replicas: 3 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
@@ -71,5 +71,7 @@ spec:
         ports:
         - containerPort: 80
 ```
+
+
 
 ![img.png](../images/2_1.png)

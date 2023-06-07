@@ -16,6 +16,8 @@
 
 ## study
 - [Role 설정](/study/1_role_binding.md)
+- [kubectl & pod](/study/2_kubectl_and_pod.md)
+- [Replicaset](/study/3_replicaset.md)
 
 -------------
 ### 참고 자료
